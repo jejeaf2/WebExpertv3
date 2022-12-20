@@ -1,6 +1,6 @@
-import UrlParser from '../../routes/url-parser'
-import FavoriteButtonPresenter from '../../utils/favorite-button-presenter'
-import FavoriteRestaurantIdb from '../../data/favoriterestaurant-idb'
+import UrlParser from '../../routes/urlParser'
+import FavoriteButtonPresenter from '../../utils/FavoritePresenterButton'
+import FavoriteRestaurantIdb from '../../data/favoriterestaurantCulinaryIdb'
 
 const Detail = {
   async render () {

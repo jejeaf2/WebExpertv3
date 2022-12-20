@@ -3,7 +3,7 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit'
 import 'regenerator-runtime' /* for async await transpile */
 import '../styles/main.css'
 import App from './views/app'
-import swRegister from './utils/sw-register'
+import swRegister from './utils/swRegister'
 
 const hamburgerButtonElement = document.querySelector('#hamburger')
 const drawerElement = document.querySelector('#drawer')

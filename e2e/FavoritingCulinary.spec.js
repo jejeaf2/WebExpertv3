@@ -19,9 +19,9 @@ Scenario('favoriting and unfavoriting one restaurant', async ({ I }) => {
   // Press ENTER in terminal to run the next step
   pause()
 
-  I.seeElement('.contents a')
+  I.seeElement('.contents x')
 
-  const firstRestaurant = locate('.contents a').first()
+  const firstRestaurant = locate('.contents x').first()
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant)
   I.click(firstRestaurant)
 
@@ -30,13 +30,13 @@ Scenario('favoriting and unfavoriting one restaurant', async ({ I }) => {
 
   I.amOnPage('/#/favorite')
 
-  const favoritedRestaurantTitle = await I.grabTextFrom('.contents a')
+  const favoritedRestaurantTitle = await I.grabTextFrom('.contents x')
 
   assert.strictEqual(firstRestaurantTitle, favoritedRestaurantTitle)
 
-  I.seeElement('.contents a')
+  I.seeElement('.contents x')
 
-  const favoritedRestaurant = locate('.contents a').first()
+  const favoritedRestaurant = locate('.contents x').first()
   I.click(favoritedRestaurant)
 
   I.seeElement('#favoriteButton')

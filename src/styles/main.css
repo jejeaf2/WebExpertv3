@@ -110,8 +110,8 @@ body{
 }
 
 nav{
-    background-color: #203239;
-    color: #EEEDDE;
+    background-color: #1B2430;
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -150,8 +150,8 @@ main{
 }
 
 footer{
-    background-color: #203239;
-    color: #EEEDDE;
+    background-color: #1B2430;
+    color: whitesmoke;
     font-weight: bold;
     padding: 20px 0;
 }
@@ -182,13 +182,6 @@ nav ul li a{
 #explore .container > div {
     margin: 0 auto;
     padding: 16px;
-}
-
-.contents-header{
-    display: block;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
 }
 
 #restaurant-content img{

@@ -1,4 +1,4 @@
-import UrlParser from '../routes/url-parser'
+import UrlParser from '../routes/urlParser'
 import routes from '../routes/routes'
 
 class App {

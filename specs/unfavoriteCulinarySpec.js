@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import * as TestFactories from './helpers/testFactories'
-import FavoriteRestaurantIdb from '../src/scripts/data/favoriterestaurant-idb'
+import FavoriteRestaurantIdb from '../src/scripts/data/favoriterestaurantCulinaryIdb'
 
 const addFavoriteButtonContainer = () => {
   document.body.innerHTML = '<div id="favoriteButtonContainer"></div>'

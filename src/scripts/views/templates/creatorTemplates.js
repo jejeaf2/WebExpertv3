@@ -1,4 +1,4 @@
-const createRestaurantItemTemplate = (restaurant) => `
+const createCulinaryTemplate = (restaurant) => `
   <div class="contents">
     <img class="images lazyload" data-src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name}" alt='Gambar Restaurant ${restaurant.name}'>
     <a href="/#/detail/${restaurant.id}" class="text-center contents-header">${restaurant.name}</a>
@@ -21,7 +21,7 @@ const createFavoritedButtonTemplate = () => `
 `
 
 export {
-  createRestaurantItemTemplate,
+  createCulinaryTemplate,
   createFavoriteButtonTemplate,
   createFavoritedButtonTemplate
 }

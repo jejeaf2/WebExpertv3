@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-import FavoriteRestaurantSearchPresenter from '../src/scripts/views/pages/favorited-restaurants/favorite-restaurant-search-presenter'
-import FavoriteRestaurantIdb from '../src/scripts/data/favoriterestaurant-idb'
+import FavoriteRestaurantSearchPresenter from '../src/scripts/views/pages/favoritedCulinary/favoriteRestaurantPresenterSearch'
+import FavoriteRestaurantCulinaryIdb from '../src/scripts/data/favoriterestaurantCulinaryIdb'
 
 describe('Searching restaurants', () => {
   let presenter
@@ -11,7 +11,7 @@ describe('Searching restaurants', () => {
     queryElement.dispatchEvent(new Event('change'))
   }
 
-  const setRestaurantSearchContainer = () => {
+  const setRestaurantCulinarySearchContainer = () => {
     document.body.innerHTML = `
         <div id="restaurant-search-container">
             <input id="query" type="text">
@@ -24,28 +24,28 @@ describe('Searching restaurants', () => {
   }
 
   const constructPresenter = () => {
-    spyOn(FavoriteRestaurantIdb, 'searchRestaurants')
+    spyOn(FavoriteRestaurantCulinaryIdb, 'searchRestaurants')
     presenter = new FavoriteRestaurantSearchPresenter({
-      favoriteRestaurants: FavoriteRestaurantIdb
+      favoriteRestaurants: FavoriteRestaurantCulinaryIdb
     })
   }
 
   beforeEach(() => {
-    setRestaurantSearchContainer()
+    setRestaurantCulinarySearchContainer()
     constructPresenter()
   })
 
   it('should be able to capture the query typed by the user', () => {
-    searchRestaurants('restaurant a')
+    searchRestaurants('restaurant x')
 
-    expect(presenter.latestQuery).toEqual('restaurant a')
+    expect(presenter.latestQuery).toEqual('restaurant x')
   })
 
   it('should ask the model to search for restaurants', () => {
-    searchRestaurants('restaurant a')
+    searchRestaurants('restaurant x')
 
-    expect(FavoriteRestaurantIdb.searchRestaurants)
-      .toHaveBeenCalledWith('restaurant a')
+    expect(FavoriteRestaurantCulinaryIdb.searchRestaurants)
+      .toHaveBeenCalledWith('restaurant x')
   })
 
   it('should show the found restaurants', () => {

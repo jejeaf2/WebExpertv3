@@ -1,5 +1,5 @@
-import FavoriteRestaurantIdb from '../data/favoriterestaurant-idb'
-import { createFavoriteButtonTemplate, createFavoritedButtonTemplate } from '../views/templates/template-creator'
+import FavoriteRestaurantIdb from '../data/favoriterestaurantCulinaryIdb'
+import { createFavoriteButtonTemplate, createFavoritedButtonTemplate } from '../views/templates/creatorTemplates'
 
 const FavoriteButtonInitiator = {
   async init ({ favoriteButtonContainer, restaurant }) {

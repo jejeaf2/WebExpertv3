@@ -1,4 +1,4 @@
-import { createRestaurantItemTemplate } from '../templates/template-creator'
+import { createRestaurantItemTemplate } from '../templates/creatorTemplates'
 
 const Home = {
   async render () {
