@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import * as TestFactories from './helpers/testFactories'
-import FavoriteRestaurantIdb from '../src/scripts/data/favoriterestaurantCulinaryIdb'
+import FavoriteCulinaryIdb from '../src/scripts/data/favoriteCulinaryIdb'
 
 const addFavoriteButtonContainer = () => {
   document.body.innerHTML = '<div id="favoriteButtonContainer"></div>'
@@ -9,11 +9,11 @@ const addFavoriteButtonContainer = () => {
 describe('Unfavoriting A Restaurant', () => {
   beforeEach(async () => {
     addFavoriteButtonContainer()
-    await FavoriteRestaurantIdb.putRestaurant({ id: 1 })
+    await FavoriteCulinaryIdb.putRestaurant({ id: 1 })
   })
 
   afterEach(async () => {
-    await FavoriteRestaurantIdb.deleteRestaurant(1)
+    await FavoriteCulinaryIdb.deleteRestaurant(1)
   })
 
   it('should display unfavorite widget when the restaurant has been favorited', async () => {
@@ -35,18 +35,18 @@ describe('Unfavoriting A Restaurant', () => {
 
     document.querySelector('[aria-label="unfavorite this restaurant"]').dispatchEvent(new Event('click'))
 
-    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([])
+    expect(await FavoriteCulinaryIdb.getAllRestaurants()).toEqual([])
   })
 
   it('should not throw error if the unfavorited restaurant is not in the list', async () => {
     await TestFactories.createFavoriteButtonPresenterWithRestaurant({ id: 1 })
 
     // hapus dulu film dari daftar film yang disukai
-    await FavoriteRestaurantIdb.deleteRestaurant(1)
+    await FavoriteCulinaryIdb.deleteRestaurant(1)
 
     // kemudian, simulasikan pengguna menekan widget batal menyukai film
     document.querySelector('[aria-label="unfavorite this restaurant"]').dispatchEvent(new Event('click'))
 
-    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([])
+    expect(await FavoriteCulinaryIdb.getAllRestaurants()).toEqual([])
   })
 })

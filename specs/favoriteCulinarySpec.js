@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import * as TestFactories from './helpers/testFactories'
-import FavoriteRestaurantIdb from '../src/scripts/data/favoriterestaurantCulinaryIdb'
+import FavoriteRestaurantIdb from '../src/scripts/data/favoriteCulinaryIdb'
 
 describe('Favoriting A Restaurant', () => {
   const addFavoriteButtonContainer = () => {

@@ -1,5 +1,5 @@
 import FavoriteButtonInitiator from '../../src/scripts/utils/FavoriteInitiatorButton'
-import FavoriteRestaurantIdb from '../../src/scripts/data/favoriterestaurantCulinaryIdb'
+import FavoriteRestaurantIdb from '../../src/scripts/data/favoriteCulinaryIdb'
 
 const createFavoriteButtonwithRestaurantCulinary = async (restaurant) => {
   await FavoriteButtonInitiator.init({

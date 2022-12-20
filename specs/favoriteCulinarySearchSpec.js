@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import FavoriteRestaurantSearchPresenter from '../src/scripts/views/pages/favoritedCulinary/favoriteRestaurantPresenterSearch'
-import FavoriteRestaurantCulinaryIdb from '../src/scripts/data/favoriterestaurantCulinaryIdb'
+import FavoriteRestaurantCulinaryIdb from '../src/scripts/data/favoriteCulinaryIdb'
 
 describe('Searching restaurants', () => {
   let presenter

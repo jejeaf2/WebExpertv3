@@ -8,8 +8,8 @@ Before(({ I }) => {
   I.amOnPage('/#/favorite')
 })
 
-Scenario('showing empty favorited restaurants', ({ I }) => {
-  I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found')
+Scenario('showing empty favorited culinary', ({ I }) => {
+  I.see('Tidak ada culnary restaurant untuk ditampilkan', '.restaurant-item__not__found')
 })
 
 Scenario('favoriting and unfavoriting one restaurant', async ({ I }) => {
@@ -21,23 +21,23 @@ Scenario('favoriting and unfavoriting one restaurant', async ({ I }) => {
 
   I.seeElement('.contents x')
 
-  const firstRestaurant = locate('.contents x').first()
-  const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant)
-  I.click(firstRestaurant)
+  const firstCulinary = locate('.contents x').first()
+  const firstCulinaryTitle = await I.grabTextFrom(firstCulinary)
+  I.click(firstCulinary)
 
   I.seeElement('#favoriteButton')
   I.click('#favoriteButton')
 
   I.amOnPage('/#/favorite')
 
-  const favoritedRestaurantTitle = await I.grabTextFrom('.contents x')
+  const favoritedCulinaryTittle = await I.grabTextFrom('.contents x')
 
-  assert.strictEqual(firstRestaurantTitle, favoritedRestaurantTitle)
+  assert.strictEqual(firstCulinaryTitle, favoritedCulinaryTittle)
 
   I.seeElement('.contents x')
 
-  const favoritedRestaurant = locate('.contents x').first()
-  I.click(favoritedRestaurant)
+  const favoritedCulinary = locate('.contents x').first()
+  I.click(favoritedCulinary)
 
   I.seeElement('#favoriteButton')
   I.click('#favoriteButton')
